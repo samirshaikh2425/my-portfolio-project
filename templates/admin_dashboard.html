@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | My Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 20px;
+            font-family: Arial, sans-serif;
+            background: #f3f4f6;
+            color: #1f2937;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            color: #292052;
+        }
+
+        .logout-button {
+            padding: 11px 18px;
+            background: #b91c1c;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        .message-count {
+            margin-bottom: 20px;
+            color: #4b5563;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 750px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            vertical-align: top;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        th {
+            background: #292052;
+            color: white;
+        }
+
+        td.message-cell {
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+            max-width: 400px;
+        }
+
+        tr:hover td {
+            background: #f9fafb;
+        }
+
+        .empty {
+            padding: 30px;
+            text-align: center;
+            background: white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div class="header">
+            <div>
+                <h1>Admin Dashboard</h1>
+                <p>Contact messages received through your portfolio.</p>
+            </div>
+
+            <form action="{{ url_for('admin_logout') }}" method="POST">
+                <button class="logout-button" type="submit">
+                    Log Out
+                </button>
+            </form>
+        </div>
+
+        <p class="message-count">
+            Messages displayed: {{ messages|length }}
+        </p>
+
+        {% if messages %}
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Message</th>
+                            <th>Date Received</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for item in messages %}
+                            <tr>
+                                <td>{{ item.id }}</td>
+                                <td>{{ item.name }}</td>
+                                <td>{{ item.email }}</td>
+                                <td class="message-cell">{{ item.message }}</td>
+                                <td>{{ item.created_at }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <div class="empty">
+                <h2>No messages yet</h2>
+                <p>Messages submitted through your Contact form will appear here.</p>
+            </div>
+        {% endif %}
+    </main>
+</body>
+</html>

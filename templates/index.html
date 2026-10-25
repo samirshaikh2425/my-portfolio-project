@@ -1,0 +1,278 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Samir Shaikh | First Website</title>
+
+        <link rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}">
+    </head>
+
+    <body>
+        <header class="site-header">
+            <h1 class="logo">My Portfolio Website</h1>
+
+            <nav class="navbar">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <h1>Hello, I'm <span>Samir Shaikh</span></h1>
+
+                <p>AI & DS Engineering Student | Python Programming | Database Management (SQL) | Machine Learning</p>
+
+                <p>
+                    I build practical projects using Python, Machine Learning,
+                    Data Science, and web technologies.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="hero-button">View My Projects</a>
+                    <a href="#about" class="hero-button secondary-button">About Me</a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="about" id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="{{ url_for('static', filename='images/my_photo.jpg') }}" alt="Samir Shaikh">
+                <p>
+                    I am Samir Shaikh, an AI & Data Science Engineering student with a strong interest in Python, Java, Machine Learning, MySQL, and Frontend Development. I am continuously learning and building practical projects to strengthen my technical and problem-solving skills.<br><br>
+                    I am interested in Artificial Intelligence, Data Science, Machine Learning, and Software Development, and enjoy exploring how technology can solve real-world problems. I am currently looking for internship opportunities, projects, and learning experiences where I can apply my skills, gain industry experience, and grow as a technology professional.
+                </p>
+            </div>
+        </section>
+
+        <section class="skills" id="skills">
+            <h2>Skills I'm Learning</h2>
+
+            <div class="skill-container">
+                <span>Programming Languages: Python, C, Java, SQL</span>
+                <span>Databases: MySQL, SQL Queries</span>
+                <span>Web Development: HTML, CSS, JavaScript, Frontend Development, Responsive Web Design</span>
+                <span>Machine Learning: Supervised Learning, Unsupervised Learning, Exploratory Data Analysis (EDA), Feature Engineering, Feature Selection, Regression, Model Evaluation, Data Visualization</span>
+                <span>Libraries: Pandas, NumPy, Scikit-learn, Matplotlib</span>
+                <span>Frameworks : Streamlit</span>
+                <span>Computer Fundamentals: Data Structures, Problem Solving, Operating Systems (Windows, Ubuntu)</span>
+                <span>Version Control: Git, GitHub</span>
+                <span>Development Tools: VS Code, Jupyter Notebook, Google Colab, Antigravity</span>
+            </div>
+        </section>
+
+        <main>
+
+        <div class="card-container" id="projects">
+
+        <div class="section-heading-project">
+            <h2>My Projects</h2>
+
+            <p>
+                Here are some of the projects I have worked on, showcasing my skills in Machine Learning, Web Development, and Data Science. Each project demonstrates my ability to apply theoretical knowledge to practical problems and create solutions that have real-world applications.
+           </p>
+        </div>
+
+        <div class="project-container">
+
+            <!-- Card 1-->
+
+            <div class="project-card">
+                <img src="{{ url_for('static', filename='images/project1.png') }}" alt="Student Performance Prediction">
+
+                <div class="project-overlay">
+
+                <h3>Student Performance Prediction & Feature Engineering Analysis</h3>
+
+                <p>
+                    An end-to-end Machine Learning project analyzing student academic performance and comparing Random Forest regression performance across baseline, feature-engineered, and feature-selected datasets.
+                </p>
+
+                <div class="project-buttons">
+                    <a href="https://github.com/samirshaikh2425/student-performance-prediction/blob/main/student_performance.ipynb" class="live-button">
+                        Live Demo
+                    </a>
+
+                    <a href="https://github.com/samirshaikh2425/student-performance-prediction" class="source-button">
+                        Source Code
+                    </a>
+                </div>
+
+                </div>
+                
+                
+            </div>
+
+            <!-- Card 2-->
+
+            <div class="project-card">
+                <img src="{{ url_for('static', filename='images/project2.png') }}" alt="Farmer Crop Price Assistant">
+
+                <div class="project-overlay">
+
+                <h3>Farmer Crop Price Assistant!</h3>
+
+                <p>
+                    Machine learning web application for mandi crop price estimation and crop yield prediction using Streamlit python framework.
+                </p>
+
+                <div class="project-buttons">
+                    <a href="https://crop-price-and-yield-prediction.streamlit.app/" class="live-button">
+                        Live Demo
+                    </a>
+
+                    <a href="https://github.com/samirshaikh2425/crop-price-prediction" class="source-button">
+                        Source Code
+                    </a>
+                </div>
+
+                </div>
+                
+                
+            </div>
+
+            <!-- Card 3-->
+
+            <div class="project-card">
+                <img src="{{ url_for('static', filename='images/project3.png') }}" alt="Cross-Cultural Communication Advisor">
+
+                <div class="project-overlay">
+
+                <h3>🌐 Cross-Cultural Communication Advisor</h3>
+
+                <p>
+                    An NLP-powered pragmatic assistance system designed to analyze English text in international, cross-cultural professional and academic communication.
+                </p>
+
+                <div class="project-buttons">
+                    <a href="https://cross-cultural-communication-advisor.streamlit.app/" class="live-button">
+                        Live Demo
+                    </a>
+
+                    <a href="https://github.com/samirshaikh2425/cross-cultural-communication-advisor" class="source-button">
+                        Source Code
+                    </a>
+                </div>
+
+                </div>
+                
+                
+            </div>
+        </div>
+        
+        
+
+        </div>
+
+        </main>
+
+        <section class="education" id="education">
+            <div class="section-heading">
+                <h2>My Education</h2>
+                <p>
+                    My academic journey has helped me build a strong foundation in science, technology, and problem-solving, while preparing me for a career in Artificial Intelligence and Data Science.
+                </p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-card">
+                    <span class="duration">2024 - Present</span>
+                    <h3>Bachelor of Technology (B.Tech)</h3>
+                    <h4>PVG's College of Engineering and Technology, Pune</h4>
+                    <p>
+                        Currently pursuing B.Tech in Artificial Intelligence and Data Science.
+                        Learning programming, web development, data structures, databases, machine learning, and other core engineering concepts through academic projects and practical work.
+                    </p>
+                </div>
+
+                <div class="timeline-card">
+                    <span class="duration">2022 - 2024</span>
+                    <h3>Higher Secondary Certificate (HSC) with 100/100 in Mathematics</h3>
+                    <h4>Vidya Pratishthan's Arts, Science & Commerce College, Baramati</h4>
+                    <p>
+                        Completed Higher Secondary education in the Science stream with a strong focus on Mathematics (100/100 in HSC), Physics, and Chemistry, which sparked my interest in engineering and technology.
+                    </p>
+                </div>
+
+                <div class="timeline-card">
+                    <span class="duration">2017 - 2022</span>
+                    <h3> Secondary School Certificate (SSC)</h3>
+                    <h4>Lal Bahadur Shastri Vidyalaya Salse</h4>
+                    <p>
+                        Completed secondary education from 5th to 10th standard while building a strong academic foundation and developing an interest in computers, logical thinking, and problem-solving.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="section-heading">
+                <h2>Contact Me</h2>
+
+                <p>
+                    Thank you for visiting my first website. If you have any suggestions, feedback, or would like to connect, feel free to send me a message.
+                </p>
+            </div>
+
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% for category, message in messages %}
+                    <p class="form-message {{ category }}" role="status">
+                        {{ message }}
+                    </p>
+                {% endfor %}
+            {% endwith %}
+
+
+            <form class="contact-form" action="{{ url_for('contact') }}" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+
+                    <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+
+                    <input type="email" id="email" name="email" placeholder="Enter Your E-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+
+                    <textarea type="text" id="message" name="message" placeholder="Enter Message" rows="5"  maxlength="5000" required></textarea>
+                </div>
+
+                <button type="submit" class="contact-button">
+                    Send Message
+                </button>
+            </form>
+            
+            <div class="contact-info">
+                <p>
+                    Email:
+                    <a href="mailto:samirshaikh24@gmail.com">
+                        samirshaikh24@gmail.com
+                    </a>
+                </p>
+                <p>
+                    Phone:
+                    <a href="tel:+918767783474">
+                        +91 87677 83474
+                    </a>
+                </p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/samir-shaikh-61071234b/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/samirshaikh2425" target="_blank">GitHub</a>
+                    <a href="#" target="_blank">Leetcode</a>
+                </div>
+            </div>
+        </section>
+
+    </body>
+</html>
