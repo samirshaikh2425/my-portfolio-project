@@ -16,6 +16,7 @@ if not app.secret_key:
     raise RuntimeError("FLASK_SECRET_KEY is missing from .env")
 
 
+""" This function establishes a connection to the MySQL database using the mysql.connector library.
 def get_db_connection():
     return mysql.connector.connect(
         host=os.getenv("DB_HOST", "localhost"),
@@ -23,7 +24,17 @@ def get_db_connection():
         password=os.getenv("DB_PASSWORD", ""),
         database=os.getenv("DB_NAME", "portfolio_db")
     )
+"""
 
+def get_db_connection():
+    return mysql.connector.connect(
+        host=os.environ["DB_HOST"],
+        port=int(os.getenv("DB_PORT", "3306")),
+        user=os.environ["DB_USER"],
+        password=os.environ["DB_PASSWORD"],
+        database=os.environ["DB_NAME"],
+        ssl_disabled=False
+    )
 
 @app.route("/")
 def home():
